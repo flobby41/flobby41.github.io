@@ -243,6 +243,60 @@ stroke:#01ffc7;
 stroke-width:3px;
 stroke-dasharray:3115px}
 
+ /* Logo styles */
+ .logo-wrap {
+  max-width: 65px;
+  padding-top: 8px;
+  width: 100%;
+  left: 25px;
+  top:-5px;
+  z-index: 100;
+}
+.logo-wrap .logo2 {
+  position: fixed;
+  display: block;
+  animation: logoIn .45s ease-out .2s backwards
+}
+
+.shade {
+  transition: transform 0.3s ease-out; /* Transition plus rapide pour suivre la souris */
+}
+.shade {
+  position: absolute;
+  left: -35px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 65px;
+  height: 65px;
+}
+.shade .stroke-path {
+    stroke-width: 2.5px;
+  }
+
+  .shade {
+    transition: transform 0.3s ease-out; /* Transition plus rapide pour suivre la souris */
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    will-change: transform;
+    /* Supprimer l'animation: animation: gentleFloat 4s ease-in-out infinite; */
+    transform-style: preserve-3d;
+  }
+    
+
+  .stroke-poly {
+    fill: none;
+    color: #7f00e0;
+    stroke: var(--line);
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    vector-effect: non-scaling-stroke;
+  }
 @keyframes a{
 0%{stroke-dashoffset:3115;
 fill:transparent}50%{stroke-dashoffset:0;fill:transparent}to{fill:#01ffc7}}
